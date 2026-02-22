@@ -1,3 +1,10 @@
+<img width="1800" height="1118" alt="image" src="https://github.com/user-attachments/assets/d396db66-0601-4ba9-96b7-74d2130a840f" />
+
+
+
+
+
+
 Structra AI: The Future of Architectural DesignDesign Your Home. See It Come Alive.
 
 Structra AI is a cutting-edge, AI-native platform for architectural design. It seamlessly transforms initial concepts, room measurements, or existing blueprints into functional, intelligent floor plans, stunning 3D models, and fully immersive spatial experiences.
