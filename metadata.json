@@ -1,0 +1,8 @@
+{
+  "name": "ArchAI - AI-Powered Home Design & Architecture",
+  "description": "A comprehensive AI platform for generating home designs, floor plans, 3D renders, and VR walkthroughs from user requirements or existing blueprints.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
