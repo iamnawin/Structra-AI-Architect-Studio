@@ -5,75 +5,46 @@
 
 
 
-Structra AI: The Future of Architectural DesignDesign Your Home. See It Come Alive.
+# Structra AI: The Future of Architectural Design
 
-Structra AI is a cutting-edge, AI-native platform for architectural design. It seamlessly transforms initial concepts, room measurements, or existing blueprints into functional, intelligent floor plans, stunning 3D models, and fully immersive spatial experiences.
+Structra AI is an advanced architectural design studio powered by a collaborative team of AI agents. From blueprint analysis to immersive VR walkthroughs, Structra AI streamlines the entire design process.
 
-It replaces the complexity of traditional CAD software with a simple, guided, and conversational design process, powered by advanced artificial intelligence and real-time visualization technology. Structra is built for the next generation of home planning.-----Why Choose Structra AI?
+## 🚀 Key Features
 
-Home design today is often technical, fragmented, and slow. Structra AI redefines this process by providing a unified, intelligent workflow where users can:
-Describe their vision using everyday language.
-Upload and analyze an existing floor plan.
-Instasesntly generate and explore optimized layout options.
-Visualize spaces in photorealistic 3D.
-Virtually walk through their future home.
------Core Capabilities
-Capability
-Description
-Key Features
-🧠 AI Architect
-A guided, conversational design experience that acts as your personal AI architect.
-Conversational flow, context-aware follow-up, iterative refinement, user-friendly decision support.
-📐 Blueprint Intelligence
-Converts static images into clean, usable, scaled vector floorplans.
-Supports PDF, JPG, PNG uploads; automatic room/wall detection; scale and orientation assistance.
-🏗️ Intelligent Layout Generation
-Creates optimized, multi-option floor plans based on user input and constraints.
-Multiple plan options, space optimization logic, style-aware configurations, optional Vastu alignment.
-🧊 Real-Time 3D Modeling
-Instantly converts 2D floor plans into accurate 3D geometry.
-Instant 2D→3D conversion, accurate wall/opening geometry, progressive previews, glTF/Three.js compatibility.
-🎥 Visual & Immersive Experience
-Provides high-fidelity visualization and virtual reality capabilities.
-Photorealistic renders, 360° spatial previews, WebXR-ready VR pipeline (roadmap), shareable project views.
-📦 Deliverables & Export
-Provides all necessary files for the next stages of planning and construction.
-Downloadable floor plans (PDF), 3D model export, versioned design history, cost estimation (planned).
+- **Multi-Agent Collaboration**: Specialized AI agents (Architect, Design, 3D, Render) work together to bring your vision to life.
+- **Blueprint Analysis**: Upload existing blueprints (JPG/PNG/PDF) for instant spatial analysis and 2D reconstruction.
+- **Instant 3D Modeling**: Convert 2D concepts into spatial 3D volumes with a single click.
+- **Photorealistic Renders**: Generate high-fidelity interior and exterior renders using advanced image generation models.
+- **VR Walkthroughs**: Experience your designs in immersive 1:1 scale before a single brick is laid.
+- **Intelligent Design Iteration**: Chat with the Architect AI to refine requirements, styles, and spatial distributions.
 
------Intuitive User Experience Flow
+## 🛠 Tech Stack
 
-Structra AI offers three simple entry points to begin designing:
-1️⃣ Blueprint Path: For users with an existing plan.
-Flow: Upload → Analyze → Confirm → Generate
-2️⃣ Measurement Path: For users with basic plot size and requirements.
-Flow: Answer (Questions) → Synthesize → Visualize
-3️⃣ Idea Path: For early-stage exploration and dreamers.
-Flow: Describe → Discover → Design
------System and Technology🏛️ Modular Architecture
+- **Frontend**: React 18, TypeScript, Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **AI Engine**: Google Gemini API (@google/genai)
+- **Build Tool**: Vite
 
-Structra AI utilizes a modular, multi-agent pipeline for robust and scalable performance:
+## 📦 Getting Started
 
-User Input → Architect AI (Intent) → Blueprint AI (Plan Understanding) → Design AI (Layout Synthesis) → 3D Model Builder → Render & VR Pipeline → Export & Sharing🧱 Technology Stack
-Frontend: Next.js / React, Tailwind CSS, Three.js (for 3D), WebXR (planned).
-Backend: Node.js / NestJS, REST/GraphQL APIs, Python geometry services (optional).
-AI Layer: LLM orchestration (OpenAI / Claude), Vision models (for parsing), Constraint-based layout engine.
-Data & Infrastructure: PostgreSQL, Redis, Object storage (S3/R2), Worker queue (BullMQ / Celery).
------🗺️ Product Roadmap
-Milestone
-Key Features
-MVP
-AI requirement intake, basic layout generation, simple 3D massing, blueprint upload support.
-V1
-Advanced wall detection, multi-design comparison, photoreal rendering, project versioning.
-V2
-Full VR walkthrough, cost estimation engine, structural validation hooks, collaboration features.
+1. **Environment Setup**:
+   - Ensure `GEMINI_API_KEY` is set in your environment.
+   
+2. **Installation**:
+   ```bash
+   npm install
+   ```
 
------📌 Project Status & Disclaimer
+3. **Development**:
+   ```bash
+   npm run dev
+   ```
 
-Status: 🚧 Active Development – AI-Native Spatial Design Platform
+## 📐 Design Philosophy
 
-Disclaimer: Structra AI provides conceptual architectural assistance. All generated plans and visualizations are for early-stage planning and must be reviewed and approved by licensed professionals before any construction begins.🤝 Get Involved
+Structra AI follows a "Technical Editorial" aesthetic, combining the precision of architectural tools with the elegance of high-end design magazines. The interface uses a dark, high-contrast palette with emerald accents to signify active AI intelligence.
 
-We welcome contributions to push the boundaries of AI-driven spatial design. Please open an issue or submit a pull request.
+---
 
-Structra AI — Where Ideas Become Spaces.
+*Built with ❤️ for architects and dreamers.*
