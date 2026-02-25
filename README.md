@@ -22,7 +22,7 @@ Structra AI is an advanced architectural design studio powered by a collaborativ
 
 For a current baseline assessment and restructure plan, see `docs/PROJECT_AUDIT.md`.
 For the concrete implementation sequence to build the full app, see `docs/BUILD_PLAN.md`.
-For the full execution checklist and release gate, see `docs/MASTER_CHECKLIST.md`.
+For the full execution checklist and release gate, see `docs/MASTER_CHECKLIST.md`
 For a low-investment staged build strategy (Gemini now, framework-flexible later), see `docs/LEAN_EXECUTION_PLAN.md`.
 
 ## 🛠 Tech Stack
