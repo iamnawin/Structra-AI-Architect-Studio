@@ -1,28 +1,56 @@
-# Project Structure Recommendation
+# Project Structure (Current + Next)
+
+## Current repository structure
 
 ```text
-archai-monorepo/
-├── apps/
-│   ├── web/                # React + Vite + Tailwind
-│   │   ├── src/
-│   │   │   ├── components/ # UI, 2D/3D Viewers
-│   │   │   ├── hooks/      # AI streaming, state
-│   │   │   └── services/   # API clients
-│   └── api/                # Express + Node.js
-│       ├── src/
-│       │   ├── routes/     # REST Endpoints
-│       │   ├── services/   # Business Logic
-│       │   └── orchestrator/# AI Pipeline Logic
-├── packages/
-│   ├── types/              # Shared TS interfaces
-│   ├── ai-core/            # Gemini SDK wrappers, prompts
-│   └── spatial-utils/      # Geometry & Vector math
-├── workers/
-│   ├── blueprint-parser/   # Python/Node (OpenCV)
-│   ├── render-engine/      # Blender/Stable Diffusion
-│   └── exporter/           # PDF/glTF generation
-├── infra/
-│   ├── docker/             # Container configs
-│   └── terraform/          # Cloud resources (AWS/GCP)
-└── docs/                   # Architecture & Design Docs
+.
+├── docs/                  # Product, architecture, API, roadmap documentation
+├── prompts/               # Prompt templates for AI workflow stages
+├── src/
+│   ├── components/
+│   │   └── landing/       # Landing page sections
+│   ├── data/              # Static content/config for UI sections
+│   ├── App.tsx            # App composition root
+│   ├── index.css
+│   └── main.tsx
+├── index.html
+├── package.json
+└── vite.config.ts
 ```
+
+## Near-term target structure (single-repo, pragmatic)
+
+```text
+.
+├── docs/
+├── prompts/
+├── server/
+│   └── src/
+│       ├── routes/
+│       ├── services/
+│       └── db/
+├── src/
+│   ├── components/
+│   ├── features/
+│   ├── lib/
+│   ├── data/
+│   └── types/
+└── ...
+```
+
+## Long-term target (optional monorepo)
+
+```text
+structra-monorepo/
+├── apps/
+│   ├── web/
+│   └── api/
+├── packages/
+│   ├── types/
+│   ├── ai-core/
+│   └── spatial-utils/
+├── workers/
+└── infra/
+```
+
+This staged approach avoids over-engineering now while preserving a clean path to a monorepo when backend workers and shared packages become real.
