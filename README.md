@@ -18,6 +18,13 @@ Structra AI is an advanced architectural design studio powered by a collaborativ
 - **VR Walkthroughs**: Experience your designs in immersive 1:1 scale before a single brick is laid.
 - **Intelligent Design Iteration**: Chat with the Architect AI to refine requirements, styles, and spatial distributions.
 
+## 📋 Repository Status
+
+For a current baseline assessment and restructure plan, see `docs/PROJECT_AUDIT.md`.
+For the concrete implementation sequence to build the full app, see `docs/BUILD_PLAN.md`.
+For the full execution checklist and release gate, see `docs/MASTER_CHECKLIST.md`.
+For a low-investment staged build strategy (Gemini now, framework-flexible later), see `docs/LEAN_EXECUTION_PLAN.md`.
+
 ## 🛠 Tech Stack
 
 - **Frontend**: React 18, TypeScript, Tailwind CSS
