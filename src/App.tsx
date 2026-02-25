@@ -7,6 +7,7 @@ import { FeaturesSection } from './components/landing/FeaturesSection';
 import { Footer } from './components/landing/Footer';
 import { HeroSection } from './components/landing/HeroSection';
 import { Navigation } from './components/landing/Navigation';
+import { MvpKickoffSection } from './components/landing/MvpKickoffSection';
 import { WorkflowSection } from './components/landing/WorkflowSection';
 
 export default function App() {
@@ -16,6 +17,7 @@ export default function App() {
 
       <main className="max-w-7xl mx-auto px-8 py-20">
         <HeroSection />
+        <MvpKickoffSection />
         <FeaturesSection />
         <WorkflowSection />
       </main>

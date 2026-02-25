@@ -8,7 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "clean": "rm -rf dist",
-    "lint": "tsc --noEmit"
+    "lint": "tsc --noEmit",
+    "dev:api": "node server/src/index.js",
+    "dev:full": "bash -c \"npm run dev:api & npm run dev\""
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
