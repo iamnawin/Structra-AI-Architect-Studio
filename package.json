@@ -10,7 +10,8 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "dev:api": "node server/src/index.js",
-    "dev:full": "bash -c \"npm run dev:api & npm run dev\""
+    "dev:full": "bash -c \"npm run dev:api & npm run dev\"",
+    "smoke": "node scripts/smoke.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.29.0",
