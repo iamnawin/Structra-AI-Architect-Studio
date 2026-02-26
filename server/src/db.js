@@ -3,19 +3,26 @@ import path from 'node:path';
 import Database from 'better-sqlite3';
 
 const dataDir = path.resolve('server/data');
+const migrationsDir = path.resolve('server/migrations');
 fs.mkdirSync(dataDir, { recursive: true });
 
 const dbPath = path.join(dataDir, 'structra.db');
-const db = new Database(dbPath);
+export const db = new Database(dbPath);
 
 db.pragma('journal_mode = WAL');
+db.pragma('foreign_keys = ON');
 
-db.exec(`
-  CREATE TABLE IF NOT EXISTS projects (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    title TEXT NOT NULL,
-    location TEXT NOT NULL,
-    created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+function runMigrations() {
+  db.exec(`
+    CREATE TABLE IF NOT EXISTS _migrations (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      filename TEXT UNIQUE NOT NULL,
+      applied_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%SZ', 'now'))
+    );
+  `);
+
+  const applied = new Set(
+    db.prepare('SELECT filename FROM _migrations').all().map((r) => r.filename),
   );
 
   CREATE TABLE IF NOT EXISTS project_requirements (
@@ -41,11 +48,10 @@ db.exec(`
   );
 `);
 
-export function listProjects() {
-  return db
-    .prepare('SELECT id, title, location, created_at as createdAt FROM projects ORDER BY id DESC')
-    .all();
-}
+  const files = fs
+    .readdirSync(migrationsDir)
+    .filter((f) => f.endsWith('.sql'))
+    .sort();
 
 export function getProjectById(id) {
   return db

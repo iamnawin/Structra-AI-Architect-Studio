@@ -1,9 +1,10 @@
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export function HeroSection() {
   return (
-    <div className="grid lg:grid-template-columns-[1fr_1fr] gap-16 items-center">
+    <div className="grid lg:grid-cols-2 gap-16 items-center">
       <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.8 }}>
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold uppercase tracking-wider mb-6">
           <Sparkles className="w-3 h-3" />
@@ -16,15 +17,21 @@ export function HeroSection() {
         </h1>
         <p className="text-lg text-black/60 max-w-md mb-10 leading-relaxed">
           From abstract ideas to professional 2D plans, photorealistic 3D renders, and immersive VR walkthroughs.
-          Powered by Gemini 3.1 Pro.
+          Powered by Gemini AI.
         </p>
         <div className="flex flex-wrap gap-4">
-          <button className="bg-black text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all">
+          <Link
+            to="/dashboard"
+            className="bg-black text-white px-8 py-4 rounded-2xl font-bold flex items-center gap-2 hover:scale-[1.02] active:scale-[0.98] transition-all"
+          >
             Create New Project <ArrowRight className="w-5 h-5" />
-          </button>
-          <button className="border border-black/10 px-8 py-4 rounded-2xl font-bold hover:bg-white transition-all">
-            View Sample Designs
-          </button>
+          </Link>
+          <a
+            href="#features"
+            className="border border-black/10 px-8 py-4 rounded-2xl font-bold hover:bg-white transition-all"
+          >
+            See Features
+          </a>
         </div>
       </motion.div>
 
