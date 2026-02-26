@@ -4,9 +4,22 @@ dist/
 coverage/
 .DS_Store
 *.log
-.env*
+npm-debug.log*
+
+# Environment (never commit secrets)
+.env
+.env.local
+.env.*.local
 !.env.example
 
+# Database files
 server/data/*.db
 server/data/*.db-shm
 server/data/*.db-wal
+server/data/
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
