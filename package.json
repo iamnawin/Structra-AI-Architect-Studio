@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.1.0",
   "type": "module",
+  "bin": {
+    "structra": "./cli/index.js"
+  },
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
@@ -11,9 +14,12 @@
     "lint": "tsc --noEmit",
     "dev:api": "node server/src/index.js",
     "dev:full": "bash -c \"npm run dev:api & npm run dev\"",
-    "smoke": "node scripts/smoke.mjs"
+    "smoke": "node scripts/smoke.mjs",
+    "cli": "node cli/index.js",
+    "cli:setup": "node -e \"const fs=require('fs');if(!fs.existsSync('.env')){fs.copyFileSync('.env.example','.env');console.log('Created .env — add your ANTHROPIC_API_KEY');}else{console.log('.env already exists');}\" 2>/dev/null || ([ ! -f .env ] && cp .env.example .env && echo 'Created .env — add your ANTHROPIC_API_KEY' || echo '.env already exists')"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
     "@google/genai": "^1.29.0",
     "@tailwindcss/vite": "^4.1.14",
     "@vitejs/plugin-react": "^5.0.4",
